@@ -31,10 +31,10 @@ body {
   height: 440px;
 }
 #elemMenu3:hover {
-  height: 320px;
+  height: 400px;
 }
 #elemMenu4:hover {
-  height: 120px;
+  height: 160px;
 }
 
 #menu {
@@ -159,12 +159,4 @@ a {
 .line {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.backgroundText {
-  position: fixed;
-  margin-top: 200px;
-  width: 20px;
-  height: 20px;
-  background-color: black;
 }
