@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Гистограмма</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    canvas {
+        display: block;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+    <canvas id='draw' width='600' height='600' style="background: white; border: 2px solid;">   
+        <script>
+            var canvas = document.getElementById('draw');
+            var ctx=canvas.getContext("2d");
+
+            $('#draw').bind('click', function() {
+                ctx.strokeStyle='black';
+                ctx.beginPath();  
+                ctx.moveTo(85,40);
+                ctx.lineTo(85,500);
+                ctx.lineTo(500,500);
+                ctx.moveTo(85,40);
+                ctx.closePath();
+                ctx.stroke();
+                ctx.font = "14pt sans-serif";
+                ctx.fillStyle='maroon';
+                ctx.fillText("Годы", 10, 250);
+                ctx.fillText("Учебное заведение", 210, 520);
+                ctx.fillText("12", 60, 90);
+                ctx.fillText("9", 60, 180);
+                ctx.fillText("6", 60, 270);
+                ctx.fillText("3", 60, 360);
+                ctx.fillStyle="maroon";
+                ctx.fillText("Детский сад", 100, 475);
+                ctx.fillText("Школа", 250, 475);
+                ctx.fillText("Университет", 350, 475);
+                
+                var grad = ctx.createLinearGradient(40, 240, 80, 480);
+                grad.addColorStop(0.5,'fuchsia');
+                grad.addColorStop(1.0,'maroon');
+                ctx.fillStyle = grad;
+                ctx.fillRect(120, 360, 60, 89);
+
+                var img = new Image();
+                img.src = 'pics.jpg';
+                
+                img.onload = function() {
+                    var pattern = ctx.createPattern(img, 'repeat');
+                    ctx.fillStyle = pattern;
+                    ctx.fillRect(240, 90, 60, 359);
+                };
+                var grad = ctx.createLinearGradient(350, 300, 460, 460);
+                grad.addColorStop(0.5,'blue');
+                grad.addColorStop(1.0,'white');
+                ctx.fillStyle = grad;
+                ctx.fillRect(370, 330, 60, 119);
+            })
+        </script> 
+</body>
+</html>

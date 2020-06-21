@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>16lab</title>
+    <link rel="stylesheet" href="15Graph.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+  </head>
+  <body>
+    <input type="button" value="y = x&#178" class="button" id="x2">
+    <input type="button" value="y = x&#179" class="button" id="x3">
+    <input type="button" value="y = sin(x)" class="button" id="sin">
+    <input type="button" value="y = cos(x)" class="button" id="cos">
+    <input type="color" id="color" onchange="color()"></br>
+    <canvas id="canvas1" width="400px" height="500px"></canvas>
+    <script>
+        $(document).ready(function() {
+          function color() {
+            var color = document.querySelector('#color').value;
+            return color;
+            }
+
+            $( "#x2" ).click(function() {
+              var ctx = canvas1.getContext("2d");
+              for (var i = -20; i < 20; i += 0.01) {
+                ctx.fillStyle = color(); 
+                ctx.fillRect(200 + i * 10, 250 - Math.pow(i, 2), 1, 5);
+              }
+            })
+
+            $( "#x3" ).click(function() {
+              var ctx = canvas1.getContext("2d");
+              for (var i = -20; i < 20; i += 0.01) {
+                ctx.fillStyle = color(); 
+                ctx.fillRect(200 + i * 10, 250 - Math.pow(i, 3), 1, 5);
+              }
+            })
+            
+            $( "#sin" ).click(function() {
+              var ctx = canvas1.getContext("2d");
+              for (var i = -20; i < 20; i += 0.01) {
+                ctx.fillStyle = color();
+                ctx.fillRect(200 + i * 10, 250 - Math.sin(i)*100, 1, 5);
+              }
+            })
+            
+            $( "#cos" ).click(function() {
+              var ctx = canvas1.getContext("2d");
+              for (var i = -20; i < 20; i += 0.01) {
+                ctx.fillStyle = color(); 
+                ctx.fillRect(200 + i * 10, 250 - Math.cos(i)*100, 1, 5);
+              }
+            })
+
+        })
+    </script>
+  </body>
+</html>

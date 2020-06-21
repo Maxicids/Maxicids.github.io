@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab12</title>
+    <link rel="stylesheet" href="1exe.css" />
+    <script>
+      function fun1() {
+        myWindow1 = window.open(
+          " ",
+          "Mozilla",
+          "resizable,width=640, height=480"
+        );
+        myWindow1.document.write("Имя окна " + myWindow1.name);
+        myWindow1.document.write("</br>", "Какой-нибудь текст");
+      }
+      function fun2() {
+        myWindow2 = window.open(
+          " ",
+          "Kinopoisk",
+          "resizable,width=640, height=480"
+        );
+        myWindow2.document.write("Имя окна " + myWindow2.name);
+
+      }
+      function fun3() {
+        myWindow1.close();
+      }
+      function fun4() {
+        myWindow2.close();
+      }
+      function fun5() {
+        document.write("<table style='  border: 2px solid black; padding: 3px; font-family: AmaticSC-Regular; font-size: xx-large;'>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>Свойство</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>Значение</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>1)Вся информация о браузере пользователя</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+navigator.userAgent+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>2)Версия браузера</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+navigator.appVersion+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>3)Название браузера</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+navigator.appName+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>4)Кодовое название браузера</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+navigator.appCodeName+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>5)ОС, которую использует пользователь</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+navigator.platform+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>6)Включена ли поддержка Java в браузере</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+navigator.javaEnabled()+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>7)Ширина и высота экрана</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+screen.width+" "+screen.height+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>8)Глубина цвета</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+screen.colorDepth+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>9)Количество посещенных в данном окне браузера URL</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+history.length+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>10)URL текущего документа</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+location.href+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>11)Путь к загруженному документу</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+location.pathname+"</td></tr>");
+        document.write("<tr><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>12)Имя домена загруженного документа</td><td style='border: 2px solid black; padding: 3px; text-align: left; background-color: gold;'>"+location.host+"</td></tr>");
+        document.write("</table>");
+
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="button"
+      id="button1"
+      class="button"
+      value="Открыть окно 1"
+      onclick="fun1()"
+    />
+    <input type="button" class="button" value="Открыть окно 2" onclick="fun2()" /></br>
+    <input type="button" class="button" id="button1" value="Закрыть окно 1" onclick="fun3()" />
+    <input type="button" class="button" value="Закрыть окно 2" onclick="fun4()" /></br>
+    <input type="button" class="button" value="Таблица" onclick="fun5()" style="margin-left: 39.5%;"/>
+  </body>
+</html>

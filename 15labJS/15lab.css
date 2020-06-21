@@ -1,0 +1,34 @@
+@font-face
+{
+    font-family:AmaticSC-Regular;
+    src:url('UbuntuCondensed-Regular.ttf')
+}
+body {
+    font-family:AmaticSC-Regular;
+    background-color: gold;
+    margin: 0%;
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+}
+#img1 {
+    width: 300px;
+}
+p {
+    text-align: center;
+}
+.drag {
+    width: 300px;
+    cursor: pointer;
+}
+.drag:hover {
+    border: 1px solid red;
+}
+
+#myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+#amim1, #anim2 {
+    position: absolute;
+}

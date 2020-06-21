@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="14lab.css" />
+    <script src="14lab.js"></script>
+  </head>
+  <body>
+    <div><p onmouseover="this.style.color = 'black'">Simple text</p></div>
+
+    <div><p onclick="this.style.fontSize = '100px'">Simple text</p></div>
+
+    <div><img src="Img1.jpg" onclick="imgchange(this, 'Img1.jpg', 'Img2.jpg')" /></div>
+
+    <div onclick="imgchange1(this, 'text')">
+        <img src="Img1.jpg" id="image" />
+    </div> </br>
+    <div>
+        <img id="img1" src="Img2.jpg" onmouseover="this.style.width = '400px'" onmouseout="this.style.width = '300px'" />
+    </div>
+    <div ondblclick="this.style.border = '10px solid red'">
+        <p>Teeeeext</p>
+    </div>
+  </body>
+</html>

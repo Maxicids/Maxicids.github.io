@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>maket_flex</title>
+        <link rel="stylesheet" href="maket.css">
+    </head>
+    <body>
+        <div id="text"><p>Я, <mark>Малиновский Максим Витальевич</mark>, изучаю HTML5</p></div>
+        <div class="container" id="flex">
+        <div class="header" id="flex" >
+            
+        </div>
+        <form class="menu">
+            <input type="text" id="login" placeholder="Login" style="margin-bottom: 0em;"></br>
+            <input type="text" id="password" placeholder="Password" style="margin-top: 0em;"></br>
+            Date of Birth</br>
+            <input type="date"><br>
+            <input type="color"></br>
+            <input type="tel" id="tel" placeholder="+375 xx xxx xx xx"></br>
+            <input type="email" id="email" placeholder="example@example.com"></br>
+
+            <label for="spec">Специальность: </label>
+            <select name="select" id="spec"> 
+                <option value="ПОИТ">ПОИТ</option> 
+                <option value="ИСиТ">ИСиТ</option>
+                <option value="ПОИБМС">ПОИБМС</option>
+                <option value="ДЭВИ">ДЭВИ</option>
+            </select>
+            
+            <label for="kurs">Курс: </label>
+            <input type="radio" id="kurs" value="1" name="kurs">1
+            <input type="radio" value="2" name="kurs">2
+            <input type="radio" value="3" name="kurs">3
+            <input type="radio" value="4" name="kurs">4</br>
+            <input type="button" value="Register" onclick="fun1()">
+        </form>
+        <nav class="text" id="flex" >
+            <div style="margin-left: 150px;">
+                <video
+                  src="video.mp4"
+                  autoplay
+                  poster="poster.jpg"
+                  controls="controls"
+                  width="70%"
+                >
+                  Sorry, your browser doesn't support embedded videos
+                </video>
+              </div>
+              <div style="margin-left: 300px;">
+                <audio controls src="audio.mp3">
+                  Your browser does not support the
+                  <code>audio</code> element.
+                </audio>
+              </div>
+              <figure>
+                <img src='foto.jpg' height='50px' />
+                <figcaption>Моя замечательная фотография </figcaption>
+                </figure>
+                
+        </nav>
+        </div>
+        <footer class="header" id="header2">
+            <p id="text3"style="font-size: 16; color='black'"></p>
+        </footer>
+        <script>
+            function fun1() {
+                var login = document.querySelector('#login').value;
+                var spec = document.querySelector('#spec').value;
+                var kurs = document.querySelector('#kurs').value;
+                var tel = document.querySelector('#tel').value;
+                var email = document.querySelector('#email').value;
+
+                var elem = document.querySelector('#text3');
+                elem.append(login," ",spec," ", kurs ," курс ", tel, " ", email);
+            }
+        </script>
+    </body>
+</html>

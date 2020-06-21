@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab3.xsl"?>
+<root> 
+    <students>
+        <student>
+            <name>Максим</name>
+            <surname>Малиновский</surname>
+            <score>7</score>
+            <date>2001</date>
+        </student>
+        <student>
+            <name>Иван</name>
+            <surname>Ивановский</surname>
+            <score>5</score>
+            <date>2002</date>
+        </student>
+        <student>
+            <name>Петр</name>
+            <surname>Петровский</surname>
+            <score>8</score>
+            <date>2000</date>
+        </student>
+        <student>
+            <name>Олег</name>
+            <surname>Олеговский</surname>
+            <score>6</score>
+            <date>2001</date>
+        </student>
+    </students>
+</root>

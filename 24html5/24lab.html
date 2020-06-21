@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas1"
+      width="500px"
+      height="500px"
+      style="background-color: silver;"
+    ></canvas>
+    <script>
+      var ctx = canvas1.getContext("2d");
+      ctx.shadowOffsetX = 3;
+      ctx.shadowOffsetY = 3;
+      ctx.shadowColor = "black";
+      ctx.fillStyle = "blue";
+      ctx.fillRect(200, 400, 100, 100);
+      ctx.fillStyle = "brown";
+      ctx.fillRect(240, 460, 20, 40);
+      ctx.fillStyle = "white";
+      ctx.fillRect(220, 430, 20, 20);
+      
+      ctx.fillStyle = "brown";
+      ctx.beginPath();
+      ctx.moveTo(170, 400);
+      ctx.lineTo(250, 350);
+      ctx.lineTo(330, 400);
+      ctx.fill();
+
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+
+      ctx.font = "22px Verdana";
+      ctx.fillText("ММВ!", 30, 50);
+    </script>
+  </body>
+</html>

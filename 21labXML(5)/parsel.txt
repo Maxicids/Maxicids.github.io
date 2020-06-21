@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parsel</title>
+  </head>
+
+  <body>
+    <h1>Студент</h1>
+    <div>
+      <b>Фамилия:</b>
+      <span id="s_name"></span>
+      <br />
+      <b>Имя:</b>
+      <span id="f_name"></span>
+      <br />
+      <b>Отчество:</b>
+      <span id="l_name"></span>
+      <br />
+      <b>Прохожной балл:</b>
+      <span id="score"></span>
+      <br />
+      <b>Год рождения:</b>
+      <span id="data"></span>
+      <br />
+    </div>
+    <script>
+      if (window.XMLHttpRequest)
+         xmlhttp = new XMLHttpRequest();
+      else   
+         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+      i = prompt("Введите название файла", "1");
+      xmlhttp.open("GET", i+".xml",false);
+      xmlhttp.send();
+      xmlDoc = xmlhttp.responseXML;
+      document.getElementById("s_name").innerHTML = xmlDoc.getElementsByTagName("lastname")[0].childNodes[0].nodeValue;
+      document.getElementById("f_name").innerHTML = xmlDoc.getElementsByTagName("firstname")[0].childNodes[0].nodeValue;
+      document.getElementById("l_name").innerHTML = xmlDoc.getElementsByTagName("middlename")[0].childNodes[0].nodeValue;
+      document.getElementById("score").innerHTML = xmlDoc.getElementsByTagName("score")[0].childNodes[0].nodeValue;
+      document.getElementById("data").innerHTML = xmlDoc.getElementsByTagName("data")[0].childNodes[0].nodeValue;
+   </script>
+  </body>
+</html>

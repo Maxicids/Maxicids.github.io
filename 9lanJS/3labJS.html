@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab3</title>
+    <link rel="stylesheet" href="1exe.css" />
+    <script>
+      function fun1() {
+        arr = new Array();
+        arr[0] = 6 * Math.pow(Math.PI, 2) + 3 * Math.exp(8);
+        arr[1] = 2 * Math.cos(4) + Math.cos(12) + 8 * Math.exp(3);
+        arr[2] = 3 * Math.sin(9) + Math.log(5) + Math.sqrt(3);
+        arr[3] = 2 * Math.tan(5) + 6 * Math.PI + Math.sqrt(12);
+        min = max = arr[0];
+        for (var i = 0; i < 4; i++) {
+          if (arr[i] < min) min = arr[i];
+        }
+        for (var i = 0; i < 4; i++) {
+          if (arr[i] > max) max = arr[i];
+        }
+        document.write("Минимальное значение - ", min, "<br \/>");
+        document.write("Максимальное значение - ", max, "<br \/>");
+      }
+      function fun2() {
+        arr = new Array();
+        arr[0] = "pow";
+        arr[1] = "pop";
+        arr[2] = "push";
+        arr[3] = "shift";
+        arr[4] = "round";
+        arr[5] = "floor";
+        arr[6] = "sline";
+        arr[7] = "sort";
+        const array3 = arr.slice(1, 4).concat(arr.slice(7));
+        array3.push("sort");
+        document.write(
+          "Массив методов объекта Array: ",
+          array3,
+          " ",
+          array3.length,
+          "<br \/>"
+        );
+        const array4 = arr.slice(0, 1).concat(arr.slice(4, 7));
+        array4.push("sline");
+        document.write(
+          "Массив методов объекта Math: ",
+          array4,
+          " ",
+          array4.length
+        );
+      }
+      function fun3() {
+        mystring = "Малиновский Максим Витальевич";
+        document.write(mystring.length, " ");
+        upper = mystring.toUpperCase();
+        lower = mystring.toLowerCase();
+        uplow = upper.concat(lower);
+        name = uplow.substring(0, 1);
+        surname = uplow.substring(12, 13);
+        middlename = uplow.substring(19, 20);
+        fullname1 = name.concat(surname);
+        fullname = fullname1.concat(middlename);
+        document.write(uplow, " ", fullname);
+      }
+      function fun4() {
+        let tim = new Date();
+        document.write("<table>");
+        document.write(
+          "<tr><td>Год</td><td>" + tim.getFullYear() + "</td></tr>"
+        );
+        document.write("<tr><td>Месяц</td><td>" + tim.getDate() + "</td></tr>");
+        document.write("<tr><td>День</td><td>" + tim.getDay() + "</td></tr>");
+        document.write("<tr><td>Час</td><td>" + tim.getHours() + "</td></tr>");
+        document.write(
+          "<tr><td>Минуты</td><td>" + tim.getMinutes() + "</td></tr>"
+        );
+        document.write(
+          "<tr><td>Секунды</td><td>" + tim.getSeconds() + "</td></tr>"
+        );
+        document.write("</table>");
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="button"
+      id="button1"
+      class="button"
+      value="Задание1"
+      onclick="fun1()"
+    />
+    <input type="button" class="button" value="Задание2" onclick="fun2()" />
+    <input type="button" class="button" value="Задание3" onclick="fun3()" />
+    <input type="button" class="button" value="Задание4" onclick="fun4()" />
+  </body>
+</html>

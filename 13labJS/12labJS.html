@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab3</title>
+    <link rel="stylesheet" href="1exe.css" />
+    <script>
+      function fun3() {
+        if (document.querySelector('input[value="ОИТ"]').checked) {
+          var x1 = document.querySelector('input[value="ОИТ"]').value;
+        }
+        if (document.querySelector('input[value="ОАП"]').checked) {
+          var x2 = document.querySelector('input[value="ОАП"]').value;
+        }
+        if (document.querySelector('input[value="История"]').checked) {
+          var x3 = document.querySelector('input[value="История"]').value;
+        }
+        if (document.querySelector('input[value="Физика"]').checked) {
+          var x4 = document.querySelector('input[value="Физика"]').value;
+        }
+        if (document.querySelector('input[value="Математика"]').checked) {
+          var x5 = document.querySelector('input[value="Математика"]').value;
+        }
+        let Arr = [x1, x2, x3, x4, x5];
+        document.write(
+           document.querySelector('#text').value, 
+           "<br \/>",
+           "Cтудент ",
+           document.querySelector('#surname').value,
+           " ",
+           document.querySelector('#name').value,
+           " ",
+           document.querySelector('#spec').value,
+           " курса должен сдать следующие предметы: ",
+           Arr
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <form class="form">
+      <textarea style="width: 294px;" id="text">Факультет информационных технологий</textarea>
+      <input type="text" id="name" placeholder="Введите имя" style="margin-bottom: 0em;"></br>
+      <input type="text" id="surname" placeholder="Введите фамилию" style="margin-top: 0em;"></br>
+
+      <label for="spec">Специальность: </label>
+      <select name="select" id="spec"> 
+        <option value="1">ПОИТ</option> 
+        <option value="2">ИСиТ</option>
+        <option value="3">ПОИБМС</option>
+        <option value="3">ДЭВИ</option>
+      </select>
+
+      <label for="kurs">Курс: </label>
+      <input type="radio" id="kurs" value="1" name="kurs">1
+      <input type="radio" value="2" name="kurs">2
+      <input type="radio" value="3" name="kurs">3
+      <input type="radio" value="4" name="kurs">4</br>
+
+      <label for="subjects">Предметы</br></label>
+      <input type="checkbox" id="subjects" class="checkbox" value="ОИТ">ОИТ
+      <input type="checkbox" id="subjects1" class="checkbox" value="ОАП">ОАП
+      <input type="checkbox" id="subjects2" class="checkbox" value="История">История
+      <input type="checkbox" id="subjects3" class="checkbox" value="Физика">Физика
+      <input type="checkbox" id="subjects4" class="checkbox" value="Математика">Математика</br>
+
+      <input type="button" class="button" value="submit" onclick="fun1()" />
+      <input type="button" class="button" value="reset" onclick="fun2()" />
+      <input type="button" class="button" value="Напечатать" onclick="fun3()" />
+    </form>
+  </body>
+</html>

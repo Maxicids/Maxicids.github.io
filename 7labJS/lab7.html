@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab1</title>
+    <link rel="stylesheet" href="1exe.css" />
+    <script type="text/javascript">
+      function fun1() {
+        alert(`Вас приветствует учебный центр`);
+        name = prompt(`Введите имя`, `Имя`);
+        alert(`Досвидания, ` + name);
+        if (confirm(`Изучаете JS? `)) {
+          alert(`Вас приветствует учебный центр`);
+        } else {
+          alert(`Вы нехороший человек`);
+        }
+      }
+      function fun2() {
+        x = 10;
+        y = 5;
+        document.write(
+          `Cложить два любых числа (например, 10 и 5) : `,
+          x + y,
+          `<br \/>`
+        );
+        x = "10";
+        y = "5";
+        document.write(
+          `Cложить две строки (например, “10” и “5”) : `,
+          x + y,
+          `<br \/>`
+        );
+        x = 22;
+        y = "5";
+        document.write(
+          `Cложить число и строку (например, 22 и “5”) : `,
+          x + y,
+          `<br \/>`
+        );
+        x = "22";
+        y = 5;
+        document.write(
+          `Cложить строку и число (например, “22” и 5) : `,
+          x + y,
+          `<br \/>`
+        );
+        alert(`Результатом сложения строки и числа всегда будет строка`);
+      }
+      function fun3() {
+        x = 500;
+        y = 200;
+        result1 = (35 * y - 25 * x) / 5 + 232;
+        result2 = (8 * y) / x + (5 * x) / y - 43;
+        result3 = result1 % result2;
+        document.write(
+          result1,
+          "<br \/>",
+          result2,
+          "<br \/>",
+          result3,
+          "<br \/>"
+        );
+      }
+      function fun4() {
+        x = prompt(`Введите число`, `Число`);
+        if (x < 20 || (x > 40 && x != 15 && x % 5 == 0)) {
+          alert(`Правильное значение`);
+        } else {
+          alert(`Неправильное значение`);
+        }
+        x = prompt(`Введите число`, `Число`);
+        if (x < 10 || x > 50 || (x > 10 && x < 50 && x % 5 == 0)) {
+          alert(`Правильное значение`);
+        } else {
+          alert(`Неправильное значение`);
+        }
+      }
+      function fun5() {
+        a = +prompt(`Введите 1-е число`, `Число`);
+        b = +prompt(`Введите 2-е число`, `Число`);
+        if (a > b) {
+          alert(`a > b`);
+        } else if (a == b) {
+          alert(`a = b`);
+        } else {
+          alert(`a < b`);
+        }
+        let a = 50;
+        let b = 44;
+        let c = a > b ? 10 : 20;
+        alert(c);
+      }
+      function fun6() {
+        let time = new Date();
+        switch (time.getDay()) {
+          case 1:
+            alert("Понедельник");
+            break;
+          case 2:
+            alert("Вторник");
+            break;
+          case 3:
+            alert("Среда");
+            break;
+          case 4:
+            alert("Четверг");
+            break;
+          case 5:
+            alert("Пятница");
+            break;
+          case 6:
+            alert("Суббота");
+            break;
+          case 0:
+            alert("Воскресенье");
+            break;
+            
+        }
+      }
+      function fun7() {
+        try {
+          document.write(result105);
+        } catch (e) {
+          alert("Ошибка ввода данных " + e.message);
+        }
+      }
+      function fun8() {
+        try {
+          let result1 = 5;
+          document.write(result1);
+        } catch (e) {
+          alert("Ошибка ввода данных " + e.message);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      class="button"
+      id="button1"
+      type="button"
+      value="Задание 1"
+      onclick="fun1()"
+    />
+    <input class="button" type="button" value="Задание 2" onclick="fun2()" />
+    <input class="button" type="button" value="Задание 3" onclick="fun3()" />
+    <input class="button" type="button" value="Задание 4" onclick="fun4()" />
+    <input class="button" type="button" value="Задание 5" onclick="fun5()" />
+    <input class="button" type="button" value="Задание 6" onclick="fun6()" />
+    <input class="button" type="button" value="Задание 7" onclick="fun7()" />
+    <input class="button" type="button" value="Задание 8" onclick="fun8()" />
+  </body>
+</html>

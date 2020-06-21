@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>16lab</title>
+    <link rel="stylesheet" href="16lab.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="button"><p id="text1">Simple text</p></div>
+    <div class="button"><p id="text2">Simple text</p></div></br>
+    <div><img src="smile3.png" width="200px" id="img1"></div>
+    <div><img src="smile3.png" width="200px" id="img2"></div>
+    <div><p id="text3">Simple text</p></div>
+    <div><p id="text4">Simple text</p></div>
+    <script>
+      $(document).ready(function() {
+         $("#text1").mouseover(function() {
+           $("#text1").css("color", "red");
+         });
+         $("#text1").mouseout(function() {
+           $("#text1").css("color", "black");
+         });
+         $("#text2").mouseover(function() {
+           $("#text2").css("font-size", "x-large");
+          });
+         $("#text2").mouseout(function() {
+           $("#text2").css("font-size", "xx-large");
+         });
+
+         $("#img1").bind("click", function() {
+           if ($(this).attr("src") === "smile3.png") {
+             var src = "smile1.png" 
+           }
+           else {
+            var src = "smile3.png";
+           }
+            $(this).attr("src", src);
+          });
+
+
+        $("#text3").bind("click", function() {
+          $(this).html('<img src="smile3.png" width="200px" id="img2">');
+        });
+
+        $("#img2").mouseover(function() {
+           $("#img2").css("width", "300px");
+          });
+        $("#img2").mouseout(function() {
+           $("#img2").css("width", "200px");
+         });
+
+         $("#text4").mouseover(function() {
+           $("#text4").css("border", "5px solid red");
+          });
+         $("#text4").mouseout(function() {
+           $("#text4").css("border", "0px");
+         });
+      })
+
+    </script>
+  </body>
+</html>

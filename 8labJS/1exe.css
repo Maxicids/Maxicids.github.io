@@ -1,0 +1,39 @@
+table {
+  border: 2px solid black;
+  padding: 3px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin-left: 25%;
+}
+td {
+  border: 1px solid;
+  padding: 3px;
+  text-align: center;
+}
+.yellow {
+  background-color: gold;
+  font-weight: bold;
+  text-align: center;
+}
+@font-face {
+  font-family: AmaticSC-Regular;
+  src: url("AmaticSC-Regular.ttf");
+}
+body {
+  font-family: AmaticSC-Regular;
+  font-size: xx-large;
+  background-image: url(happy_new_year_2020.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.button {
+  font-family: AmaticSC-Regular;
+  background-color: rgb(174, 223, 0);
+  font-size: xx-large;
+  height: 50px;
+  width: 110px;
+  border: 2px solid black;
+}
+#button1 {
+  margin-left: 12%;
+}

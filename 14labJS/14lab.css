@@ -1,0 +1,18 @@
+@font-face
+{
+    font-family:AmaticSC-Regular;
+    src:url('UbuntuCondensed-Regular.ttf')
+}
+body {
+    font-size: xx-large;
+    background-image: url(background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: rgb(8, 252, 199);
+  }
+  div {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  

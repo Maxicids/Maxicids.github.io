@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="15Graph.css" />
+  </head>
+  <body>
+    <input type="button" value="y = x&#178" class="button" onclick="fun1()">
+    <input type="button" value="y = x&#179" class="button" onclick="fun2()">
+    <input type="button" value="y = sin(x)" class="button" onclick="fun3()">
+    <input type="button" value="y = cos(x)" class="button" onclick="fun4()">
+    <input type="button" value="clear" class="button" onclick="clear()">
+    <input type="color" id="color" onchange="color()"></br>
+    <canvas id="canvas1" width="400px" height="500px"></canvas>
+    <script>
+      function color() {
+        var color = document.querySelector('#color').value;
+        return color;
+      }
+
+      function fun1() {
+        let ctx = canvas1.getContext("2d");
+        for (i = -20; i < 20; i += 0.01) {
+          ctx.fillStyle = color(); 
+          ctx.fillRect(200 + i * 10, 250 - Math.pow(i, 2), 1, 5);
+        }
+      }
+
+      function fun2() {
+        let ctx = canvas1.getContext("2d");
+        for (i = -20; i < 20; i += 0.01) {
+          ctx.fillStyle = color(); 
+          ctx.fillRect(200 + i * 10, 250 - Math.pow(i, 3), 1, 5);
+        }
+      }
+
+      function fun3() {
+        let ctx = canvas1.getContext("2d");
+        for (i = -20; i < 20; i += 0.01) {
+          ctx.fillStyle = color();
+          ctx.fillRect(200 + i * 10, 250 - Math.sin(i)*100, 1, 5);
+        }
+      }
+
+      function fun4() {
+        let ctx = canvas1.getContext("2d");
+        for (i = -20; i < 20; i += 0.01) {
+          ctx.fillStyle = color(); 
+          ctx.fillRect(200 + i * 10, 250 - Math.cos(i)*100, 1, 5);
+        }
+      }
+      function clear() {
+        let ctx = canvas1.getContext("2d");
+        ctx.clearRect(0, 0, 400, 500);
+      }
+
+
+    </script>
+  </body>
+</html>

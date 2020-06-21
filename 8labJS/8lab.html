@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="1exe.css" />
+    <title>Lab2</title>
+    <script type="text/javascript">
+      //Задание1
+      function fun1() {
+        alert(`Вас приветствует учебный центр`);
+        x = prompt(`Введите имя`, `Имя`);
+        alert(`Досвидания, ` + x);
+        if (confirm(`Хотите? `)) {
+          alert(`Вас приветствует учебный центр`);
+        } else {
+          alert(`Вы нехороший человек`);
+        }
+      }
+      function fun2() {
+        x = 10;
+        y = 5;
+        document.write(
+          `Cложить два любых числа (например, 10 и 5) : `,
+          x + y,
+          `<br \/>`
+        );
+        x = "10";
+        y = "5";
+        document.write(
+          `Cложить две строки (например, “10” и “5”) : `,
+          x + y,
+          `<br \/>`
+        );
+        x = 22;
+        y = "5";
+        document.write(
+          `Cложить число и строку (например, 22 и “5”) : `,
+          x + y,
+          `<br \/>`
+        );
+        x = "22";
+        y = 5;
+        document.write(
+          `Cложить строку и число (например, “22” и 5) : `,
+          x + y,
+          `<br \/>`
+        );
+        alert(`Результатом сложения строки и числа всегда будет строка`);
+      }
+      function fun3() {
+        x = 500;
+        y = 200;
+        result1 = (35 * y - 25 * x) / 5 + 232;
+        result2 = (8 * y) / x + (5 * x) / y - 43;
+        result3 = result1 % result2;
+        document.write(
+          result1,
+          "<br \/>",
+          result2,
+          "<br \/>",
+          result3,
+          "<br \/>"
+        );
+      }
+      function fun4() {
+        x = prompt(`Введите число`, `Число`);
+        if ((x < 20 || x > 40) && x != 15 && x % 5 == 0) {
+          alert(`Правильное значение`);
+        } else {
+          alert(`Неправильное значение`);
+        }
+      }
+      function fun5() {
+        a = +prompt(`Введите 1-е число`, `Число`);
+        b = +prompt(`Введите 2-е число`, `Число`);
+        if (a > b) {
+          alert(`a > b`);
+        } else if (a == b) {
+          alert(`a = b`);
+        } else {
+          alert(`a < b`);
+        }
+      }
+      function fun6() {
+        let time = new Date();
+        switch (time.getDay()) {
+          case 1:
+            alert("Понедельник");
+            break;
+          case 2:
+            alert("Вторник");
+            break;
+          case 3:
+            alert("Среда");
+            break;
+          case 4:
+            alert("Четверг");
+            break;
+          case 5:
+            alert("Пятница");
+            break;
+          case 6:
+            alert("Суббота");
+            break;
+          case 7:
+            alert("Воскресенье");
+            break;
+        }
+      }
+      function fun7() {
+        a = +prompt("Введите первое число:", "a");
+        b = +prompt("Введите второе число:", "b");
+        document.write("<table>");
+        document.write("<tr><td></td>");
+        for (i = 1; i <= b; i++)
+          document.write(
+            "<td style='padding: 3px; text-align: center;'>" + i + " </td>"
+          );
+        document.write("</tr>");
+        for (i = 1; i <= a; i++) {
+          document.write("<tr><td>" + i + " </td>");
+          for (j = 1; j <= b; j++) {
+            document.write(
+              "<td  background-color='#00ffa0'>" + i * j + " </td>"
+            );
+          }
+          document.write("</tr>");
+        }
+        document.write("</table>");
+      }
+      function fun8() {
+        a = +prompt("Введите первое число:", "a"); //меньший радиус
+        b = +prompt("Введите второе число:", "b");
+        document.write("<table text-align: center  border: 1px solid>");
+        document.write(
+          "<tr><td>Радиус</td><td>Площадь круга</td><td>Длина окружности</td></tr>"
+        );
+        i = a;
+        do {
+          document.write("<tr>");
+          document.write(
+            "<td style='border: 2px solid black; padding: 3px; text-align: center;'>" +
+              i.toFixed(1) +
+              " </td>"
+          );
+          document.write(
+            "<td style='border: 2px solid black; padding: 3px; text-align: center;'>" +
+              Math.round(Math.PI * i * i) +
+              " </td>"
+          );
+          document.write(
+            "<td style='border: 2px solid black; padding: 3px; text-align: center;'>" +
+              Math.round(2 * Math.PI * i) +
+              " </td>"
+          );
+          document.write("</tr>");
+          i = i + 0.3;
+        } while (i <= b);
+        document.write("</table>");
+      }
+      function fun9() {
+        x = new Number("34.21");
+        y = new Number("15");
+        document.write("<table style='  border: 2px solid black; padding: 3px;'>");
+        document.write(
+          "<tr><td style='border: 2px solid black; padding: 3px; text-align: center;'>Число</td><td style='border: 2px solid black; padding: 3px; text-align: center;'>toExponential</td><td style='border: 2px solid black; padding: 3px; text-align: center;'>toFixed</td><td style='border: 2px solid black; padding: 3px; text-align: center;'>toPrecision</td><td style='border: 2px solid black; padding: 3px; text-align: center;'>toString</td></tr>"
+        );
+        document.write(
+          "<tr><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            x +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            x.toExponential(3) +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            x.toFixed(3) +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            x.toPrecision(3) +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            x.toString(16) +
+            "</td></tr>"
+        );
+        document.write(
+          "<tr><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            y +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            y.toExponential(3) +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            y.toFixed(3) +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            y.toPrecision(3) +
+            "</td><td style='border: 2px solid black; padding: 3px; text-align: center; background-color: gold;'>" +
+            y.toString(16) +
+            "</td></tr>"
+        );
+        document.write("</table>");
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="button"
+      class="button"
+      id="button1"
+      value="Задание1.1"
+      onclick="fun1()"
+    />
+    <input type="button" class="button" value="Задание1.2" onclick="fun2()" />
+    <input type="button" class="button" value="Задание1.3" onclick="fun3()" />
+    <input type="button" class="button" value="Задание1.4" onclick="fun4()" />
+    <input type="button" class="button" value="Задание1.5" onclick="fun5()" />
+    <input type="button" class="button" value="Задание1.6" onclick="fun6()" />
+    <input type="button" class="button" value="Задание2" onclick="fun7()" />
+    <input type="button" class="button" value="Задание3" onclick="fun8()" />
+    <input type="button" class="button" value="Задание4" onclick="fun9()" />
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab4</title>
+    <script>
+      document.write("Задание первое", "<br \/>");
+      function Gruppa(n, spec, kolich) {
+        //Свойства(номер, специальность, количество)
+        this.n = n;
+        this.spec = spec;
+        this.kolich = kolich;
+        //Метод (добавить в группу k студентов)
+        this.add_stud = function(k) {
+          this.kolich += k;
+          document.write(
+            "В группу " + this.n + " добавили " + k + " студентов.<br\>"
+          );
+        };
+        this.sub_stud = function(k) {
+          this.kolich -= k; //this текущий объект
+          document.write(
+            "Из группы " + this.n + " убрали " + k + " студентов.<br\>"
+          );
+        };
+      }
+      var gr1 = new Gruppa(2, "ИСиТ", 28);
+      var gr2 = new Gruppa(4, "ПОИТ", 25);
+      var gr3 = new Gruppa(4, "Мобильники", 22);
+      var gr4 = new Gruppa(4, "ХТиТ", 12);
+      document.write(
+        gr1.kolich,
+        " ",
+        gr2.kolich,
+        " ",
+        gr3.kolich,
+        " ",
+        gr4.kolich,
+        " ",
+        "<br \/>"
+      );
+      gr1.add_stud(2);
+      gr2.sub_stud(2);
+      gr3.sub_stud(4);
+      gr4.add_stud(5);
+      document.write(
+        gr1.kolich,
+        " ",
+        gr2.kolich,
+        " ",
+        gr3.kolich,
+        " ",
+        gr4.kolich,
+        " ",
+        "<br \/>"
+      );
+      //Задание второе
+      document.write("Задание второе", "<br \/>");
+      function student(name, surname, physics, mathematics, computerScience) {
+        this.name = name;
+        this.surname = surname;
+        this.physics = physics;
+        this.mathematics = mathematics;
+        this.computerScience = computerScience;
+        this.output = function() {
+          document.write(
+            this.name,
+            " ",
+            this.surname,
+            " ",
+            this.physics,
+            " ",
+            this.mathematics,
+            " ",
+            this.computerScience,
+            "<br \/>"
+          );
+        };
+        this.output1 = function() {
+          document.write(
+            this.name,
+            " ",
+            this.surname,
+            " ",
+            this.physics,
+            " ",
+            this.mathematics,
+            " ",
+            this.computerScience,
+            " ",
+            this.kurs,
+            "<br \/>"
+          );
+        };
+        this.average = function() {
+          var average =
+            (this.physics + this.mathematics + this.computerScience) / 3;
+          document.write(
+            "Студент " +
+              this.name +
+              " имеет средний балл " +
+              average +
+              "<br \/>"
+          );
+        };
+      }
+      var max = new student("Max", "Malinovsky", 7, 8, 9);
+      var liz = new student("Liz", "Zizi", 9, 9, 9);
+      var ivan = new student("Ivan", "Ivanov", 5, 6, 6);
+      alert(max.name + " " + max.surname, "<br \/>");
+      max.average();
+      max.output();
+      liz.output();
+      ivan.output();
+      student.prototype.kurs = this.kurs;
+      max.kurs = 2;
+      liz.kurs = 3;
+      ivan.kurs = 4;
+      max.output1();
+      liz.output1();
+      ivan.output1();
+      //Задание 3
+      document.write("Задание третье", "<br \/>");
+      arr = new Array();
+      arr[0] = "pow";
+      arr[1] = "pop";
+      arr[2] = "push";
+      arr[3] = "shift";
+      arr[4] = "round";
+      arr[5] = "floor";
+      arr[6] = "sline";
+      arr[7] = "sort";
+      const array3 = arr.slice(1, 4).concat(arr.slice(7));
+      array3.push("sort");
+      document.write(
+        "Массив методов объекта Array: ",
+        array3,
+        " ",
+        array3.length,
+        "<br \/>"
+      );
+      const array4 = arr.slice(0, 1).concat(arr.slice(4, 7));
+      array4.push("sline");
+      document.write(
+        "Массив методов объекта Math: ",
+        array4,
+        " ",
+        array4.length,
+         "<br \/>"
+      );
+      delete array3[3];
+      delete array4[3];
+      document.write(array3, "<br \/>", array4, "<br \/>");
+      document.write("Есть ли в массиве 2-й элемент? ", 2 in array3, "<br \/>");
+      document.write("Есть ли в объете student свойство name? ","name" in student, "<br \/>");
+      document.write("Является ли объект Gruppa объектом Array? ", Gruppa instanceof Array, "<br \/>");
+      document.write("Является ли объект student объектом String? ", student instanceof String, "<br \/>");
+      document.write("Является ли объект student объектом Object? ", student instanceof Object, "<br \/>");
+      function fun1() {
+        return 5;
+      }
+      document.write(
+        "Тип функции ", typeof fun1, "<br \/>",
+        "Тип Gruppa ", typeof Gruppa, "<br \/>",
+        "Тип kolich ", typeof gr1.kolich, "<br \/>",
+        "Тип spec ", typeof gr1.spec, "<br \/>",
+        "Тип n ", typeof gr1.n, "<br \/>",
+        "Тип Gruppa ", typeof student, "<br \/>",
+        "Тип name ", typeof max.name, "<br \/>",
+        "Тип surname ", typeof max.surname, "<br \/>",
+        "Тип physics ", typeof max.physics, "<br \/>",
+        "Тип mathematics ", typeof max.mathematics, "<br \/>",
+        "Тип computerScience ", typeof max.computerScience, "<br \/>",
+        );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

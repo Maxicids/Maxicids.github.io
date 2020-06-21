@@ -1,0 +1,50 @@
+<html>
+  <head>
+      <title>Диаграмма</title>
+  </head>
+  <body>
+    <canvas width="500" height="550" id="canvas" style="margin-left: 30%; border: solid 2px black;"></canvas>
+    <script>
+      var data = [32, 32, 30, 6];
+      var colors = ["Indigo", "YellowGreen", "Crimson", "gold"];
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      
+      var prevAngle = 0.68;
+      for (var i = 0; i < data.length; i++) {
+        var angle = prevAngle + data[i]/100 * Math.PI * 2;
+        ctx.fillStyle = colors[i];
+
+        ctx.beginPath();
+        ctx.moveTo(250, 250);
+        ctx.arc(250, 250, 100, prevAngle, angle, false);
+        ctx.lineTo(250, 250);
+        ctx.fill();
+        
+        prevAngle = angle;
+      }
+
+      ctx.font = "24pt sans-serif";
+      
+
+      var height = 400;
+      var activity = ["Сон", "Университет", "Дорога", "Остальное"];
+      for (var i = 0; i < data.length; i++) {
+        ctx.fillStyle = colors[i];
+        ctx.fillRect(85,height,10,10);
+        ctx.fillStyle = colors[i];
+        ctx.fillText(activity[i], 105, height + 10);
+        height = height + 30;
+      }
+
+      ctx.font = "24pt sans-serif";
+      ctx.shadowBlur = 15;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.shadowColor = "black";
+      ctx.fillStyle = "red";
+      var text = "Диаграмма МОЙ ДЕНЬ";
+      ctx.fillText(text, 85, 100);
+    </script>
+  </body>
+</html>

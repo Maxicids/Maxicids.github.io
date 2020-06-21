@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="15lab.css" />
+  </head>
+  <body>
+    <img
+      id="anim2"
+      onclick="myMove1()"
+      style="width: 200px; margin: auto;"
+      src="background.jpg"
+    />
+
+    <script>
+      function myMove1() {
+        var elem = document.getElementById("anim2");
+        var pos = 0;
+        var id = setInterval(frame, 50); //задержка
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+            var id1 = setInterval(frame1, 50);
+            function frame1() {
+              if (pos == 0) {
+                clearInterval(id1);
+              } else {
+                pos--;
+                elem.style.marginLeft = 100*Math.sin(pos / 10) + "px";
+                elem.style.marginTop = pos + "px";
+              }
+            }
+          } else {
+            pos++;
+            elem.style.marginLeft = 100*Math.sin(pos / 10) + "px";
+            elem.style.marginTop = pos + "px";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

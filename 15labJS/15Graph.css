@@ -1,0 +1,26 @@
+@font-face
+{
+    font-family:AmaticSC-Regular;
+    src:url('UbuntuCondensed-Regular.ttf')
+}
+body {
+    font-family:AmaticSC-Regular;
+    background-color: gold;
+    margin: 0%;
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+}
+.button {
+    font-family: AmaticSC-Regular;
+    background-color: rgb(174, 223, 0);
+    font-size: xx-large;
+    margin: 4px;
+    height: 50px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#color {
+    background-color: rgb(174, 223, 0);
+    border: 2px solid black;
+}

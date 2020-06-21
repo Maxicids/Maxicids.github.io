@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 1lab </title> 
+        <script>
+            function fun1() {
+                for(var i=0; i<document.html.childNodes.length; i++) {
+                var child = document.html.childNodes[i];
+                alert(child.tagName);
+                }
+            }
+        </script>
+        <style>
+            h1 
+            {
+                font-size: 25pt;
+                font-family: 'Calibri';
+            }
+            h3
+            {
+                margin: 0cm;
+            }
+            ol
+            {
+                margin: 0cm;
+            }
+            p
+            {
+                margin: 0cm;
+            }
+            table
+            {
+                background-color: brown;
+            }
+            td
+            {
+                background-color:chocolate;
+            }
+            a 
+            { 
+                text-decoration: none;
+            } 
+        </style>
+    </head>
+    <body bgcolor="#000000" text="#ffffff" alink="#ffffff" vlink="#ffffff">
+<div> <!--Заголовок-->
+    <h1 align=center>Я, <a href="2file.html">Малиновский Максим Витальевич</a>, изучаю <font style="color:#ff0000">HTML</font> и CSS</h1>
+</div>
+<div align="justify"> <!--Текст-->
+    <p style="color: rgb(250, 1, 1);font-size: 15pt;" >
+        Два блестящих физика, Леонард и Шелдон, «великие умы», которые понимают, как «работает Вселенная». Но их гениальность ничуть не помогает им общаться с людьми, особенно с женщинами. Всё начинает меняться, когда напротив них поселяется красавица Пенни. Когда Леонард и Шелдон встречают Пенни, Леонард сразу же начинает интересоваться ею.
+    </p>
+    <p style="color: #08a4ff;font-size: 20pt;">
+        Всё начинает меняться, когда напротив них поселяется красавица Пенни.
+    </p>
+    <p style="color: rgb(250, 1, 167);font-size: 17pt;">
+        Когда Леонард и Шелдон встречают Пенни, Леонард сразу же начинает интересоваться ею.
+    </p>
+</div>
+ <h3>Описание содержания списка</h3>
+ <ol> <!--Список-->
+    <li>
+        Элемент 1
+        <ul type="disc">
+           <li>Элемент 1.1</li>
+           <li>Элемент 1.2</li>
+        </ul>
+    </li>
+    <li>
+         Элемент 2
+        <ul type="square">
+            <li>Элемент 2.1</li>
+            <li>Элемент 2.2</li>
+        </ul>
+    </li>
+    <li>
+        Элемент 2
+        <ul type="circle">
+            <li>Элемент 2.1</li>
+            <li>Элемент 2.2</li>
+        </ul>
+       </li>
+ </ol>
+</div>
+<div> <!--Таблица-->
+    <h2>Таблица</h2>
+    <table cellpadding="12" cellspacing="2" align="left" width="100%">
+        <tr>
+            <td align="center">ФИО</td><td align="center" colspan="3">Малиновский Максим Витальевич</td>
+        </tr>
+        <tr>
+            <td rowspan="2" align="center"><a href="2file.html"><img src="IMG_7888.JPG" height="100" ></a></td><td align="center" colspan="3" rowspan="2">Адрес:ул.Нёманская,д.80</td>
+        </tr>
+        <tr>
+        </tr>
+        <tr><td align="center"  rowspan="6">1 семестр 2018/2019</td><td align="center">Дата</td><td align="center">Предмет</td><td align="center">Оценка</td></tr>
+        <tr><td align="center">31.12.2019</td><td align="center">ОАиП</td><td align="center">8</td></tr>
+        <tr><td align="center">5.01.2019</td><td align="center">Физика</td><td align="center">9</td></tr>
+        <tr><td align="center">11.01.2019</td><td align="center">ОИТ</td><td align="center">8</td></tr>
+        <tr><td align="center">16.01.2017</td><td align="center">Математика</td><td align="center">8</td></tr>
+        <tr><td align="center">22.01.2019</td><td align="center">АЛОЦВМ</td><td align="center">5</td></tr>
+    </table>
+</div>
+<input type="button" class="button" value="Задание1" onclick="fun1()" />
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5</title>
+    <link rel="stylesheet" href="link.css" />
+  </head>
+  <body>
+    <div id="menu">
+      <p>Я, <mark>Малиновский Максим Витальевич</mark>, изучаю HTML5</p>
+    </div>
+    <div style="margin-left: 350px;">
+      <video
+        src="video.mp4"
+        autoplay
+        poster="poster.jpg"
+        controls="controls"
+        width="600px"
+      >
+        Sorry, your browser doesn't support embedded videos
+      </video>
+    </div>
+    <div style="margin-left: 500px;">
+      <audio controls src="audio.mp3">
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </div>
+    <div style="margin-left: 530px;">
+      <button id="find">Show location</button><br />
+      <a id="link" ></a>
+    </div>
+    <script>
+      function FindMe() {
+        const Link = document.querySelector("#link");
+
+        Link.href = "";
+        Link.textContent = "";
+
+        navigator.geolocation.getCurrentPosition(success, error);
+
+        function success(position) {
+          let latitude = position.coords.latitude;
+          let longitude = position.coords.longitude;
+
+          Link.href = `https://www.google.ru/maps/@${latitude},${longitude},18.14z?hl=en`;
+          Link.textContent = "Вы здесь!";
+        }
+        function error() {
+          status.textContent = "Невозможно определить местоположение!";
+        }
+      }
+      document.querySelector("#find").addEventListener("click", FindMe);
+    </script>
+  </body>
+</html>

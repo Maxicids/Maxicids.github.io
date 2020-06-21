@@ -1,0 +1,12 @@
+<!DOCTYPE note 
+[
+<!ELEMENT root (title, table)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT table (tr)>
+<!ELEMENT tr (td, university, minscore, dialplan, city)>
+<!ELEMENT td (#PCDATA)>
+<!ELEMENT university (#PCDATA)>
+<!ELEMENT minscore (#PCDATA)>
+<!ELEMENT dialplan (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+]>

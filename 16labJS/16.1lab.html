@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>16.1lab</title>
+    <link rel="stylesheet" href="16lab.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <div id="draggable" class="ui-widget ui-corner-all ui-state-error" style="position: absolute;height: 400px;">  
+        <img id="img1"src="background.jpg" width="200px">
+        <p>Картинка</p>
+    </div></br>
+    <div style="height: 200px;">
+        <img id="img2"src="background.jpg" width="200px">
+    </div></br> 
+    <div style="height: 200px;">
+        <img id="img3"src="background.jpg" width="200px">
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                $("#draggable").draggable();
+                });
+
+                $( "#img2" ).click(function() {
+                    $( "#img2" ).animate({
+                        marginLeft: "200px",
+                        }, 1000, function() {
+                            $( "#img2" ).animate({
+                                marginLeft: "0px",
+                                }, 1000, function() {
+
+                                });
+                            });
+                });
+
+                $( "#img3" ).click(function() {
+                    $( "#img3" ).animate({
+                        margin: "200px",
+                        }, 1000, function() {
+                            $( "#img3" ).animate({
+                                marginLeft: "0px",
+                                }, 1000, function() {
+                                    $( "#img3" ).animate({
+                                        marginTop: "0px",
+                                        }, 1000, function() {
+
+                                        });
+                                    });
+                                });
+                            });
+             })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+body
+{
+    background-color:#000000; 
+    color: azure;
+    font-size: 14pt;
+}
+.class1
+{
+    color: crimson;
+}
+.class2
+{
+    color: rgb(13, 43, 214);
+}
+.class3
+{
+    color: cyan;
+}
+a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+h1
+{
+    font-size: 25pt;
+    font-family: 'Calibri';
+    text-align: center;
+}
+h3
+{
+    margin: 0cm;
+}
+ol
+{
+     margin: 0cm;
+}
+p
+{
+     margin: 0cm;
+}
+table
+{
+     background-color: brown;
+     text-align: center;
+}
+td
+{
+    background-color:chocolate;
+}
+.class4
+{
+    color: gold;
+}

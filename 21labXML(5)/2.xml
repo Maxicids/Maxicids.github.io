@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student>
+		<lastname>Зинович</lastname>
+		<firstname>Елизавета</firstname>
+		<middlename>Игоревна</middlename>
+		<score>9.0</score>
+		<data>2002</data>
+	</student>
+</students>

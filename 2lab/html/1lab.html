@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fun1() {
+                var j = document.all.length;
+                for(i = 0; i < j; i++){
+                alert("Page element["+i+"] has tagName:"+document.all(i).tagName);
+                }
+            }
+            function fun2() {
+                for(i=0; i<document.body.children.length; i++) {
+                alert("Page element["+i+"] has tagName:"+document.body.children[i].tagName); 
+                }
+            }
+            function fun3() {
+                 alert(document.getElementById('span').firstChild.nodeValue);
+                 alert(document.getElementsByTagName('span')[0].innerText);
+                 alert(document.all["span"].firstChild.nodeValue);
+            }
+            function fun4() {
+                let num1 = +document.getElementById("number1").innerHTML;
+                let num2 = +document.getElementById("number2").innerHTML;
+                let num3 = +document.getElementById("number3").innerHTML;
+                let num4 = +document.getElementById("number4").innerHTML;
+                let num5 = +document.getElementById("number5").innerHTML;
+                let average = (num1 + num2 + num3 + num4 + num5) / 5;
+                alert(average);
+                let li3 = document.getElementById('average');
+                li3.insertAdjacentHTML("afterEnd", "<li>"+average+"</li>");
+            }
+        </script>
+        <title> 1lab </title>
+        <link rel="stylesheet" href="1file.css">
+    </head>
+    <body>
+<div> <!--Заголовок-->
+    <h1>Я, <a href="2file.html">Малиновский Максим Витальевич</a>, изучаю <span class="class4" id="span">HTML</span> и CSS</h1>
+</div>
+<div> <!--Текст-->
+    <p class="class1">
+        Два блестящих физика, Леонард и Шелдон, «великие умы», которые понимают, как «работает Вселенная». Но их гениальность ничуть не помогает им общаться с людьми, особенно с женщинами. Всё начинает меняться, когда напротив них поселяется красавица Пенни. Когда Леонард и Шелдон встречают Пенни, Леонард сразу же начинает интересоваться ею.
+    </p>
+    <p class="class2">
+        Всё начинает меняться, когда напротив них поселяется красавица Пенни.
+    </p>
+    <p class="class3">
+        Когда Леонард и Шелдон встречают Пенни, Леонард сразу же начинает интересоваться ею.
+    </p>
+</div>
+ <h3>Описание содержания списка</h3>
+ <ol> <!--Список-->
+    <li>
+        Элемент 1
+        <ul type="disc">
+           <li>Элемент 1.1</li>
+           <li id="average">Элемент 1.2</li>
+        </ul>
+    </li>
+    <li>
+         Элемент 2
+        <ul type="square">
+            <li>Элемент 2.1</li>
+            <li>Элемент 2.2</li>
+        </ul>
+    </li>
+    <li>
+        Элемент 2
+        <ul type="circle">
+            <li>Элемент 2.1</li>
+            <li>Элемент 2.2</li>
+        </ul>
+       </li>
+ </ol>
+</div>
+<div> <!--Таблица-->
+    <h2>Таблица</h2>
+    <table cellpadding="12" cellspacing="2" align="left" width="100%">
+        <tr>
+            <td>ФИО</td><td colspan="3">Малиновский Максим Витальевич</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><a href="2file.html"><img src="IMG_7888.JPG" height="100" ></a></td><td colspan="3" rowspan="2">Адрес:ул.Нёманская,д.80</td>
+        </tr>
+        <tr>
+        </tr>
+        <tr><td rowspan="6">1 семестр 2018/2019</td><td >Дата</td><td>Предмет</td><td>Оценка</td></tr>
+        <tr><td>31.12.2019</td><td>ОАиП</td><td id="number1" >8</td></tr>
+        <tr><td>5.01.2019</td><td>Физика</td><td id="number2">9</td></tr>
+        <tr><td>11.01.2019</td><td >ОИТ</td><td id="number3">8</td></tr>
+        <tr><td>16.01.2017</td><td >Математика</td><td id="number4">8</td></tr>
+        <tr><td>22.01.2019</td><td>АЛОЦВМ</td><td id="number5">5</td></tr>
+    </table>
+</div>
+<input type="button" class="button" value="Задание1" onclick="fun1()" />
+<input type="button" class="button" value="Задание2" onclick="fun2()" />
+<input type="button" class="button" value="Задание3" onclick="fun3()" />
+<input type="button" class="button" value="Задание4" onclick="fun4()" />
+    </body>
+</html>

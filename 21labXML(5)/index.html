@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Students</title>
+  </head>
+
+  <body>
+    <h1>Студент</h1>
+    <div>
+      <b>Фамилия:</b>
+      <span id="s_name"></span>
+      <br />
+      <b>Имя:</b>
+      <span id="f_name"></span>
+      <br />
+      <b>Отчество:</b>
+      <span id="l_name"></span>
+      <br />
+      <b>Прохожной балл:</b>
+      <span id="score"></span>
+      <br />
+      <b>Год рождения:</b>
+      <span id="data"></span>
+      <br />
+    </div>
+    <script>
+      var xmlhttp = new XMLHttpRequest();
+
+      var fname = prompt("Введите имя", "Юлиан");
+
+      for (var i = 1; i < 5; i++) {
+        xmlhttp.open("GET", i + ".xml", true);
+        xmlhttp.send();
+        xmlDoc = xmlhttp.responseXML;
+
+        for (var j = 1; j < 4; j++) {
+          if (xmlDoc.getElementById("fn" + j).innerHTML == fname + " ") {
+            document.getElementById("s_name").innerHTML = xmlDoc.getElementById(
+              "sn" + j
+            ).innerHTML;
+            document.getElementById("f_name").innerHTML = xmlDoc.getElementById(
+              "fn" + j
+            ).innerHTML;
+            document.getElementById("l_name").innerHTML = xmlDoc.getElementById(
+              "ln" + j
+            ).innerHTML;
+            document.getElementById("score").innerHTML = xmlDoc.getElementById(
+              "sc" + j
+            ).innerHTML;
+            document.getElementById("data").innerHTML = xmlDoc.getElementById(
+              "dt" + j
+            ).innerHTML;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

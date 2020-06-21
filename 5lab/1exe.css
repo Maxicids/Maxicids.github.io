@@ -1,0 +1,92 @@
+@font-face
+{
+    font-family:AmaticSC-Regular;
+    src:url('AmaticSC-Regular.ttf')
+}
+body
+{
+    font-family:AmaticSC-Regular;
+    font-size: xx-large;
+    background-image: url(happy_new_year_2020.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#menu
+{
+    text-shadow:2px 2px 2px #FFAE00, 2px 2px 15px rgb(255, 0, 0);
+    height: 40px;
+    width: 100%;
+    background-color: brown;
+    text-align: center;
+    color: aliceblue;
+    vertical-align: middle;
+    border-radius: 10px;
+    margin-bottom: 10pt;
+}
+#text1
+{
+    text-shadow:2px 2px 2px rgb(0, 255, 85), 2px 2px 15px rgb(102, 255, 0);
+    font-size: x-large;
+}
+img
+{
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+}
+.img1, .img2, .img3
+{
+    float:left; 
+    margin-left: 5%;
+    margin-right: 5%;
+    transition-timing-function: linear;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.img1:hover
+{
+    transform: rotate(-360deg);
+}
+.img2:hover
+{
+	transform: skew(70deg);
+}
+.img3:hover
+{
+	transform: rotate(360deg);
+}
+.gradient1
+{
+    float:left; 
+    border-radius: 50px;
+    margin: 40px;
+    height: 100px;
+    width: 1270px;
+    background: crimson;
+    color: aliceblue;
+    text-align: center;
+    background: -moz-linear-gradient(45deg, rgb(141, 10, 134), rgb(255, 0, 0));
+    text-shadow:2px 2px 2px rgb(247, 0, 255), 2px 2px 15px rgb(255, 0, 0);
+    -moz-transition: height .3s;
+    overflow: hidden;
+}
+.gradient1:hover
+{
+    height: 200px;
+}
+.gradient2
+{
+    float:left; 
+    border-radius: 50px;
+    margin: 40px;
+    margin-top: 0%;
+    height: 100px;
+    width: 1270px;
+    color: aliceblue;
+    text-align: center;
+    background: crimson;
+    background: -moz-radial-gradient(rgb(11, 155, 143), rgb(180, 25, 128));
+    text-shadow:2px 2px 2px rgb(2, 255, 78), 2px 2px 15px rgb(255, 0, 0);
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="root">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="table"/>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tr"/>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="td" type="xs:string"/>
+                                    <xs:element name="university" type="xs:string"/>
+                                    <xs:element name="minscore" type="xs:string"/>
+                                    <xs:element name="dialplan" type="xs:string"/>
+                                    <xs:element name="city" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                    </xs:sequence>
+                </xs:complexType>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

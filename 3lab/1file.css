@@ -1,0 +1,91 @@
+body
+{
+    background-color:#000000; 
+    color: azure;
+    font-size: 14pt;
+}
+.class1
+{
+    color: crimson;
+}
+.class2
+{
+    color: rgb(13, 43, 214);
+}
+.class3
+{
+    color: cyan;
+}
+a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+h1
+{
+    font-size: 25pt;
+    font-family: 'Calibri';
+    text-align: center;
+}
+h3
+{
+    margin: 0cm;
+}
+ol
+{
+     margin: 0cm;
+}
+p
+{
+     margin: 0cm;
+}
+table
+{
+     background-color: brown;
+     text-align: center;
+     width: 100%;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: 15pt;
+}
+td
+{
+    background-color:chocolate;
+}
+.class4
+{
+    color: gold;
+}
+#id1
+{
+    list-style-type: disc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: chartreuse;
+    list-style-image: url(icon_razz.gif);
+}
+#id2
+{
+    list-style-type: square;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    color: darkred;
+}
+#id3
+{
+    list-style-type: circle;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: lightcoral;
+}
+p:first-child
+{
+    color: coral;
+}
+p::first-letter
+{
+    font-size: x-large;
+    color: red;
+}
+p::first-line
+{
+    text-decoration: underline;
+}
