@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                text-align: center;
+                margin: 0;
+                font-size: 20;
+                color: black;
+            }
+            #nav {
+                background-color: gold;
+                line-height: 3em;
+            }
+            .menu {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            margin: 0;
+            width: 160;
+            border-bottom: 4px solid rgb(253, 253, 253); 
+            }
+            .menu .elemOfMenu {
+            display: none;
+            height: 40px;
+            width: 160;
+            position: absolute;
+            cursor: pointer;
+            }
+            a {
+            background-color: gold;
+            display: block;
+            text-decoration: none;
+            color: black;
+            border-bottom: 4px solid rgb(253, 253, 253); 
+            }
+        </style>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+    </head>
+    <body>
+        <div id="nav">
+            <div class="menu">
+                Home
+                <div class="elemOfMenu">
+                    <a>Item1</a>
+                    <a>Item2</a>
+                </div>
+            </div>
+            <div class="menu">
+                Contacts
+                <div class="elemOfMenu">
+                    <a>Item1</a>
+                    <a>Item2</a>
+                    <a>Item3</a>
+                    <a>Item4</a>
+                    <a>Item5</a>
+                </div>
+            </div>
+            <div class="menu">
+                About
+                <div class="elemOfMenu">
+                    <a>Item1</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.menu').hover(
+                    function() {
+                        $('.elemOfMenu', this).slideDown(100);
+                    },
+                    function() {
+                        $('.elemOfMenu', this).slideUp(100);
+                    }
+                );
+            });
+            </script>
+    </body>
+</html>
